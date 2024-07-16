@@ -1,0 +1,14 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  acs_source_url: https://github.com/ChrisSunderland/datasets/raw/main/acs_data.zip
+  local_zip_file: artifacts/data_ingestion/acs_data.zip
+  acs_data_clean: artifacts/data_ingestion/acs_data_clean
+  acs_demo_housing_clean: artifacts/data_ingestion/acs_data_clean/co_demo_housing_clean.csv
+  acs_econ_clean: artifacts/data_ingestion/acs_data_clean/co_econ_clean.csv
+  acs_housing_clean: artifacts/data_ingestion/acs_data_clean/co_housing_clean.csv
+  acs_social_clean: artifacts/data_ingestion/acs_data_clean/co_social_clean.csv
+  yelp_api_endpoint: https://api.yelp.com/v3/businesses/search
+  yelp_data: artifacts/data_ingestion/yelp_data
+  yelp_csv: artifacts/data_ingestion/yelp_data/yelp.csv
