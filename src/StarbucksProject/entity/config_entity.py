@@ -28,3 +28,8 @@ class DataValidationConfig:
     acs_yelp_combined: str
     all_schema: dict
     STATUS_FILE: str
+
+@dataclass(frozen=True)
+class DataTransformationConfig:
+    root_dir: Path
+    data_path: Path

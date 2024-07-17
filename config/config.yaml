@@ -23,3 +23,7 @@ data_validation:
   acs_yelp_combined: artifacts/data_validation/acs_yelp.csv
   all_schema: dict
   STATUS_FILE: artifacts/data_validation/status.txt
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path: artifacts/data_validation/acs_yelp.csv
