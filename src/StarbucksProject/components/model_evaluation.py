@@ -33,9 +33,9 @@ class ModelEvaluation:
         y_test = pd.read_csv(self.config.y_test_path)
 
         pipe = Pipeline([('scaler', StandardScaler()),
-                         ('knr', model)])
+                         ('abr', model)])
 
-        param_grid = {"knr__" + k: list(v) for k, v in dict(self.config.all_params).items()}
+        param_grid = {"abr__" + k: list(v) for k, v in dict(self.config.all_params).items()}
 
         gs = GridSearchCV(estimator=pipe,
                           param_grid=param_grid,
@@ -44,7 +44,7 @@ class ModelEvaluation:
                           verbose=1,
                           n_jobs=-1)
 
-        gs.fit(X_train, y_train)
+        gs.fit(X_train, y_train.values.ravel())
         tuned_model = gs.best_estimator_
         joblib.dump(tuned_model, os.path.join(self.config.root_dir, self.config.tuned_model))
 
@@ -64,6 +64,6 @@ class ModelEvaluation:
             mlflow.log_metric("mae", test_mae)
 
             if tracking_url_type_store != "file":
-                mlflow.sklearn.log_model(model, "model", registered_model_name="KNR Tuned")
+                mlflow.sklearn.log_model(model, "model", registered_model_name="AdaBoost Tuned")
             else:
                 mlflow.sklearn.log_model(model, "model")

@@ -2,6 +2,7 @@ import pandas as pd
 import os
 from src.StarbucksProject.entity.config_entity import ModelTrainerConfig
 from sklearn.neighbors import KNeighborsRegressor
+from sklearn.ensemble import AdaBoostRegressor
 from sklearn.preprocessing import StandardScaler
 import joblib
 
@@ -19,7 +20,8 @@ class ModelTrainer:
         scaler = StandardScaler()
         X_train_scaled = scaler.fit_transform(X_train)
 
-        knr = KNeighborsRegressor()
-        knr.fit(X_train_scaled, y_train)
+        abr = AdaBoostRegressor()
+        abr.fit(X_train_scaled, y_train.values.ravel())
 
-        joblib.dump(knr, os.path.join(self.config.root_dir, self.config.model_name))
+        joblib.dump(abr, os.path.join(self.config.root_dir, self.config.model_name))
+

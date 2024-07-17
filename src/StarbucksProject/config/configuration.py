@@ -78,9 +78,8 @@ class ConfigurationManager:
         return model_trainer_config
 
     def get_model_evaluation_config(self) -> ModelEvaluationConfig:
-
         config = self.config.model_evaluation
-        params = self.params.KNeighborsRegressor
+        params = self.params.AdaBoostRegressor
         schema = self.schema.TARGET_COLUMN
 
         create_directories([config.root_dir])
@@ -96,4 +95,5 @@ class ConfigurationManager:
                                                         mlflow_uri=config.mlflow_uri,
                                                         all_params=params,
                                                         target_column=schema.name)
+
         return model_evaluation_config
