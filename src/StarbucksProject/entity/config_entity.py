@@ -16,3 +16,15 @@ class DataIngestionConfig:
     yelp_api_endpoint: str
     yelp_data: Path
     yelp_csv: Path
+
+@dataclass(frozen=True)
+class DataValidationConfig:
+    root_dir: Path
+    acs_demo_housing: Path
+    acs_econ: Path
+    acs_housing: Path
+    acs_social: Path
+    yelp: Path
+    acs_yelp_combined: str
+    all_schema: dict
+    STATUS_FILE: str

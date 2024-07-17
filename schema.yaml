@@ -1,0 +1,15 @@
+COLUMNS:
+  total_pop: int64
+  males_per_100_females: float64
+  median_age: float64
+  median_rent: int64
+  total_employed: int64
+  per_capita_income: int64
+  avg_household_size: float64
+  enrolled_in_college: int64
+  total_bachelors_degree: int64
+  total_same_residence: int64
+  weighted_avg_starbucks_ratings: float64
+
+TARGET_COLUMN:
+  name: weighted_avg_starbucks_ratings

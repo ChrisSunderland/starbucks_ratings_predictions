@@ -1,6 +1,6 @@
 from src.StarbucksProject.constants import *
 from src.StarbucksProject.utils.common import read_yaml, create_directories
-from src.StarbucksProject.entity.config_entity import DataIngestionConfig
+from src.StarbucksProject.entity.config_entity import (DataIngestionConfig, DataValidationConfig)
 
 
 class ConfigurationManager:
@@ -35,3 +35,21 @@ class ConfigurationManager:
                                                     yelp_csv=config.yelp_csv)
 
         return data_ingestion_config
+
+    def get_data_validation_config(self) -> DataValidationConfig:
+        config = self.config.data_validation
+        schema = self.schema.COLUMNS
+
+        create_directories([config.root_dir])
+
+        data_validation_config = DataValidationConfig(root_dir=config.root_dir,
+                                                      acs_demo_housing=config.acs_demo_housing,
+                                                      acs_econ=config.acs_econ,
+                                                      acs_housing=config.acs_housing,
+                                                      acs_social=config.acs_social,
+                                                      yelp=config.yelp,
+                                                      acs_yelp_combined=config.acs_yelp_combined,
+                                                      all_schema=schema,
+                                                      STATUS_FILE=config.STATUS_FILE)
+
+        return data_validation_config
