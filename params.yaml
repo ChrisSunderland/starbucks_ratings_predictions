@@ -1,1 +1,4 @@
-key: value
+KNeighborsRegressor:
+  n_neighbors: [3, 5, 7]
+  weights: ['uniform', 'distance']
+  metric: ['euclidean', 'manhattan']

@@ -27,3 +27,9 @@ data_validation:
 data_transformation:
   root_dir: artifacts/data_transformation
   data_path: artifacts/data_validation/acs_yelp.csv
+
+model_training:
+  root_dir: artifacts/model_training
+  x_train_path: artifacts/data_transformation/X_train.csv
+  y_train_path: artifacts/data_transformation/y_train.csv
+  model_name: initial_model.joblib

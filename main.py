@@ -1,6 +1,7 @@
 from src.StarbucksProject.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 from src.StarbucksProject.pipeline.stage_02_data_validation import DataValidationPipeline
 from src.StarbucksProject.pipeline.stage_03_data_transformation import DataTransformationPipeline
+from src.StarbucksProject.pipeline.stage_04_model_training import ModelTrainingPipeline
 from src.StarbucksProject import logger
 
 # STAGE_NAME = "Data Ingestion Stage"
@@ -31,6 +32,17 @@ try:
     logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
     dt_pipe = DataTransformationPipeline()
     dt_pipe.main()
+    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+    logger.exception(e)
+    raise e
+
+STAGE_NAME = "Model Training Stage"
+
+try:
+    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+    mt_pipe = ModelTrainingPipeline()
+    mt_pipe.main()
     logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
 except Exception as e:
     logger.exception(e)

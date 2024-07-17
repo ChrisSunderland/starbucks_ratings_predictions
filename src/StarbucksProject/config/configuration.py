@@ -1,7 +1,7 @@
 from src.StarbucksProject.constants import *
 from src.StarbucksProject.utils.common import read_yaml, create_directories
 from src.StarbucksProject.entity.config_entity import (DataIngestionConfig, DataValidationConfig,
-                                                       DataTransformationConfig)
+                                                       DataTransformationConfig, ModelTrainerConfig)
 
 
 class ConfigurationManager:
@@ -63,3 +63,15 @@ class ConfigurationManager:
                                                               data_path=config.data_path)
 
         return data_transformation_config
+
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
+        config = self.config.model_training
+
+        create_directories([config.root_dir])
+
+        model_trainer_config = ModelTrainerConfig(root_dir=config.root_dir,
+                                                  x_train_path=config.x_train_path,
+                                                  y_train_path=config.y_train_path,
+                                                  model_name=config.model_name)
+
+        return model_trainer_config
