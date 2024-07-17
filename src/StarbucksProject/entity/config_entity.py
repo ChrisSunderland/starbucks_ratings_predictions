@@ -40,3 +40,17 @@ class ModelTrainerConfig:
     x_train_path: Path
     y_train_path: Path
     model_name: str
+
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+    root_dir: Path
+    model_path: Path
+    x_train_path: Path
+    y_train_path: Path
+    x_test_path: Path
+    y_test_path: Path
+    metric_file_name: Path
+    tuned_model: str
+    mlflow_uri: str
+    all_params: dict
+    target_column: str
