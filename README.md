@@ -42,7 +42,7 @@ raw datasets to make it possible to run the program without an API key. Simply f
 **1)** Clone this repository
 
 ```bash
-https://github.com/ChrisSunderland/starbucks_ratings_predictions.git
+git clone https://github.com/ChrisSunderland/starbucks_ratings_predictions.git
 ```
 
 **2)** Navigate to the repository from your terminal
