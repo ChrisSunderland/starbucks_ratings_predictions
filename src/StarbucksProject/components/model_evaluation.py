@@ -67,3 +67,5 @@ class ModelEvaluation:
                 mlflow.sklearn.log_model(model, "model", registered_model_name="AdaBoost Tuned")
             else:
                 mlflow.sklearn.log_model(model, "model")
+
+        return tuned_model

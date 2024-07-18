@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Starbucks Prediction App</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="static/css/styles.css" rel="stylesheet" />
+        <link href="static/css2/style.css" rel="stylesheet" />
+
+    </head>
+
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="/">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+<!--                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>-->
+<!--                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>-->
+<!--                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html">Sample Post</a></li>-->
+<!--                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>-->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-color: var(--bs-green)">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Starbucks Prediction App</h1>
+                            <span class="subheading"> Use census demographic data to predict how well a community has received its local Starbucks locations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-content">
+
+            <div class="form-v9-content">
+
+                <form class="form-detail" action="/predict" method="post">
+
+                    <h2>Enter zip code information</h2>
+                    <h6> The model below returns its prediction for the weighted average
+                        of the Yelp ratings for every Starbucks in a zip code of interest </h6>
+
+
+                    <div class="form-row-total">
+
+                        <div class="form-row">
+                            <label for="total_pop"> total_pop:</label>
+                            <input type="text" name="total_pop" id="total_pop" class="input-text" placeholder="int" required>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="males_per_100_females"> males_per_100_females:</label>
+                            <input type="text" name="males_per_100_females" id="males_per_100_females" class="input-text" placeholder="float" required>
+                        </div>
+
+                    </div>
+
+                    <div class="form-row-total">
+
+                        <div class="form-row">
+                            <label for="median_age"> median_age:</label>
+                            <input type="text" name="median_age" id="median_age" class="input-text" placeholder="float" required>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="median_rent"> median_rent:</label>
+                            <input type="text" name="median_rent" id="median_rent" class="input-text" placeholder="int" required>
+                        </div>
+
+                    </div>
+
+
+                <div class="form-row-total">
+
+                    <div class="form-row">
+                        <label for="total_employed"> total_employed:</label>
+						<input type="text" name="total_employed" id="total_employed" class="input-text" placeholder="int" required>
+					</div>
+
+                    <div class="form-row">
+                        <label for="per_capita_income"> per_capita_income:</label>
+						<input type="text" name="per_capita_income" id="per_capita_income" class="input-text" placeholder="int" required>
+					</div>
+
+				</div>
+
+                <div class="form-row-total">
+
+                    <div class="form-row">
+                        <label for="avg_household_size"> avg_household_size:</label>
+						<input type="text" name="avg_household_size" id="avg_household_size" class="input-text" placeholder="float" required>
+					</div>
+
+                    <div class="form-row">
+                        <label for="enrolled_in_college"> enrolled_in_college:</label>
+						<input type="text" name="enrolled_in_college" id="enrolled_in_college" class="input-text" placeholder="int" required>
+					</div>
+
+				</div>
+
+
+                <div class="form-row-total">
+
+                    <div class="form-row">
+                        <label for="total_bachelors_degree"> total_bachelors_degree:</label>
+						<input type="text" name="total_bachelors_degree" id="total_bachelors_degree" class="input-text" placeholder="int" required>
+					</div>
+
+                    <div class="form-row">
+                        <label for="total_same_residence"> total_same_residence:</label>
+						<input type="text" name="total_same_residence" id="total_same_residence" class="input-text" placeholder="int" required>
+					</div>
+
+				</div>
+
+                <div class="form-row-last">
+					<input type="submit" name="register" class="register" value="PREDICT SCORE">
+				</div>
+
+                </form>
+
+            </div>
+        </div>
+
+
+<!--            <div class="form-v9-content" style= ackground-image: url('static/assets/img/form-v9.jpg')">-->
+<!--                <form class="form-detail" action="/predict" method="post">-->
+<!--                    <h2>Please Fill The Information</h2>-->
+<!--                    <div class="form-row-total">-->
+<!--    -->
+<!-
+<!--    -->
+<!--                        <div class="form-row">-->
+<!--                            <label for="males_per_100_females"> males_per_100_females:</label>-->
+<!--                            <input type="text" name="males_per_100_females" id="males_per_100_females" class="input-text" placeholder="float" required>-->
+<!--                        </div>-->
+<!--    -->
+<!--                    </div>-->
+
+
+
+
+    </body>
+
+
+</html>
+
+
+
+
+        <!-- Main Content-->
+<!--        <div class="container px-4 px-lg-5">-->
+<!--            -->
+<!--            <!DOCTYPE html>-->
+<!--<html>-->

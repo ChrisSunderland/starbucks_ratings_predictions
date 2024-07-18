@@ -4,6 +4,7 @@ from src.StarbucksProject.pipeline.stage_03_data_transformation import DataTrans
 from src.StarbucksProject.pipeline.stage_04_model_training import ModelTrainingPipeline
 from src.StarbucksProject.pipeline.stage_05_model_evaluation import ModelEvaluationPipeline
 from src.StarbucksProject import logger
+import joblib
 
 # STAGE_NAME = "Data Ingestion Stage"
 #
@@ -49,12 +50,25 @@ except Exception as e:
     logger.exception(e)
     raise e
 
+# STAGE_NAME = "Model Evaluation Stage"
+#
+# try:
+#     logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+#     me_pipe = ModelEvaluationPipeline()
+#     me_pipe.main()
+#     logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+# except Exception as e:
+#     logger.exception(e)
+#     raise e
+
 STAGE_NAME = "Model Evaluation Stage"
 
 try:
     logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
     me_pipe = ModelEvaluationPipeline()
-    me_pipe.main()
+    final_model = me_pipe.main()
+    joblib.dump(final_model, 'final_model.joblib')
+
     logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
 except Exception as e:
     logger.exception(e)

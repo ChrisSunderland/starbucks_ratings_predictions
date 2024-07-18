@@ -23,8 +23,8 @@ files = [".env",
          f"src/{project_name}/utils/common.py",
          "main.py",
          "app.py",
-         "web_app_templates/index.html",
-         "web_app_templates/results.html",
+         "templates/index.html",  # for flask app
+         "templates/results.html", # for flask app
          "Dockerfile"]
 
 # create the project's initial folder structure

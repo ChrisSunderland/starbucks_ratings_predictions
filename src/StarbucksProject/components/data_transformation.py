@@ -25,8 +25,3 @@ class DataTransformation:
         y_train.to_csv(os.path.join(self.config.root_dir, "y_train.csv"), index=False)
         y_test.to_csv(os.path.join(self.config.root_dir, "y_test.csv"), index=False)
 
-        logger.info(X_train.shape)
-        logger.info(y_train.shape)
-        logger.info(X_test.shape)
-        logger.info(y_test.shape)
-
