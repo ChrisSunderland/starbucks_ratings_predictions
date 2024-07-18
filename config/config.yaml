@@ -13,13 +13,24 @@ data_ingestion:
   yelp_data: artifacts/data_ingestion/yelp_data
   yelp_csv: artifacts/data_ingestion/yelp_data/yelp.csv
 
+#data_validation:
+#  root_dir: artifacts/data_validation
+#  acs_demo_housing: artifacts/data_ingestion/acs_data_clean/co_demo_housing_clean.csv
+#  acs_econ: artifacts/data_ingestion/acs_data_clean/co_econ_clean.csv
+#  acs_housing: artifacts/data_ingestion/acs_data_clean/co_housing_clean.csv
+#  acs_social: artifacts/data_ingestion/acs_data_clean/co_social_clean.csv
+#  yelp: artifacts/data_ingestion/yelp_data/yelp.csv
+#  acs_yelp_combined: artifacts/data_validation/acs_yelp.csv
+#  all_schema: dict
+#  STATUS_FILE: artifacts/data_validation/status.txt
+
 data_validation:
   root_dir: artifacts/data_validation
-  acs_demo_housing: artifacts/data_ingestion/acs_data_clean/co_demo_housing_clean.csv
-  acs_econ: artifacts/data_ingestion/acs_data_clean/co_econ_clean.csv
-  acs_housing: artifacts/data_ingestion/acs_data_clean/co_housing_clean.csv
-  acs_social: artifacts/data_ingestion/acs_data_clean/co_social_clean.csv
-  yelp: artifacts/data_ingestion/yelp_data/yelp.csv
+  acs_demo_housing: data/acs_data/co_demo_housing_clean.csv
+  acs_econ: data/acs_data/co_econ_clean.csv
+  acs_housing: data/acs_data/co_housing_clean.csv
+  acs_social: data/acs_data/co_social_clean.csv
+  yelp: data/yelp_data/yelp.csv
   acs_yelp_combined: artifacts/data_validation/acs_yelp.csv
   all_schema: dict
   STATUS_FILE: artifacts/data_validation/status.txt
