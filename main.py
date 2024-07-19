@@ -50,17 +50,6 @@ except Exception as e:
     logger.exception(e)
     raise e
 
-# STAGE_NAME = "Model Evaluation Stage"
-#
-# try:
-#     logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
-#     me_pipe = ModelEvaluationPipeline()
-#     me_pipe.main()
-#     logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
-# except Exception as e:
-#     logger.exception(e)
-#     raise e
-
 STAGE_NAME = "Model Evaluation Stage"
 
 try:
