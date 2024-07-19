@@ -5,6 +5,7 @@ numpy
 scikit-learn
 matplotlib
 python-box==6.0.2
+python-dotenv==1.0.1
 pyYAML
 tqdm
 ensure==1.0.2
