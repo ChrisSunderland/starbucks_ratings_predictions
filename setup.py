@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 __version__ = "0.0.0"
 
-REPO_NAME = "starbucks_rating_predictions"
+REPO_NAME = "starbucks_ratings_predictions"
 AUTHOR_USER_NAME = "ChrisSunderland"
 SRC_REPO = "StarbucksProject"
 

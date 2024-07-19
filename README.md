@@ -21,7 +21,7 @@ of how I would calculate this score for a zip code in the dataset...
   
 As far as data sources, I relied on the Yelp Fusion API to collect Starbucks review data for the various zip codes. 
 For the demographic data I utilized several datasets from the US Census Bureau's American Community Survey. The fields I used to train the model can be 
-seen in both the web app I developed and "schema.yaml" file inside this repository. I also want to point out 
+seen in both the web app I developed and the "schema.yaml" file inside this repository. I also want to point out 
 that I focused specifically on zip codes and Starbucks locations inside the state of Colorado for this project.
 
 Lastly, one can find instructions further below for how to run the project locally, use MLflow to evaluate the model's 
@@ -87,9 +87,9 @@ python app.py
 **4)** Update your local .env file with the following variables 
 
 ```bash
-MLFLOW_TRACKING_URI=your_dagshub_uri
-MLFLOW_TRACKING_USERNAME=your_dagshub_username
-MLFLOW_TRACKING_PASSWORD=your_dagshub_password
+MLFLOW_TRACKING_URI=your_uri
+MLFLOW_TRACKING_USERNAME=your_username
+MLFLOW_TRACKING_PASSWORD=your_password
 ```
 
 **5)** Adjust the hyperparameters in the "params.yaml" file (optional)
@@ -122,7 +122,7 @@ Once there, you'll be able to view how models with different hyperparameters per
 
 **4)** Create EC2 instance (Ubuntu)
 
-**5)**  Open EC2 instance and run the follow commands to install docker
+**5)**  Open EC2 instance and run the following commands to install docker
 
 	sudo apt-get update -y
 

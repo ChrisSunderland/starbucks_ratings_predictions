@@ -12,7 +12,7 @@ files = [".env",
          "config/config.yaml",
          "schema.yaml",
          "params.yaml",
-         ".github/workflows/main.yaml",
+         ".github/workflows/.gitkeep",
          "notebooks/stage_01_data_ingestion.ipynb",
          f"src/{project_name}/__init__.py",  # set up logger in this file
          f"src/{project_name}/components/data_ingestion.py",
