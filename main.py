@@ -6,6 +6,8 @@ from src.StarbucksProject.pipeline.stage_05_model_evaluation import ModelEvaluat
 from src.StarbucksProject import logger
 import joblib
 
+# stage 1 (data ingestion) has been commented out so you can run the program without obtaining a Yelp API key
+
 # STAGE_NAME = "Data Ingestion Stage"
 #
 # try:
