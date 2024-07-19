@@ -54,8 +54,8 @@ STAGE_NAME = "Model Evaluation Stage"
 
 try:
     logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
-    me_pipe = ModelEvaluationPipeline()
-    final_model = me_pipe.main()
+    me_eval_pipe = ModelEvaluationPipeline()
+    final_model = me_eval_pipe.main()
     joblib.dump(final_model, 'final_model.joblib')
 
     logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
