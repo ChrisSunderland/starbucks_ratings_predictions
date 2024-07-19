@@ -120,7 +120,7 @@ Once there, you'll be able to view how models with different hyperparameters per
 
 **3)** Create ECR repository and save the repository's URI
 
-**4)** Create EC2 machine (Ubuntu)
+**4)** Create EC2 instance (Ubuntu)
 
 **5)**  Open EC2 instance and run the follow commands to install docker
 
