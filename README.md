@@ -69,7 +69,9 @@ python app.py
 ```
 **6)**  Click on the provided link to navigate to the web app 
 
-**7)** Scroll down and fill in the fields to generate a prediction
+**7)**  To train the model, add "/train" to the website URL
+
+**8)**  Return to the app's home page and fill in the fields to generate a prediction
 
 ![form](static/readme_images/form.png)
 ![prediction](static/readme_images/prediction.png)
